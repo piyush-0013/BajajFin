@@ -26,7 +26,7 @@ app.post("/bfhl", (req, res) => {
       } else {
         response.odd_numbers.add(req.body.data[i]);
       }
-    } else if (typeof req.body[i] == "string") {
+    } else if (typeof req.body.data[i] == "string") {
       response.alphabets.add(req.body.data[i]);
     }
   }
