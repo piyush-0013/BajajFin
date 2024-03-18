@@ -20,13 +20,13 @@ app.get("/", (req, res) => {
 
 app.post("/bfhl", (req, res) => {
   for (let i = 0; i < req.body.data.length; i++) {
-    if (typeof req.body.data[i] === "number") {
+    if (typeof req.body.data[i] == "number") {
       if (req.body.data[i] % 2 == 0) {
         response.even_numbers.add(req.body.data[i]);
       } else {
         response.odd_numbers.add(req.body.data[i]);
       }
-    } else if (typeof req.body[i] === "string") {
+    } else if (typeof req.body[i] == "string") {
       response.alphabets.add(req.body.data[i]);
     }
   }
