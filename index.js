@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.post("/bfhl", (req, res) => {
   for (let i = 0; i < req.body.length; i++) {
     if (typeof req.body.data[i] === "number") {
-      if (req.body[i] % 2 == 0) {
+      if (req.body.data[i] % 2 == 0) {
         response.even_numbers.add(req.body.data[i]);
       } else {
         response.odd_numbers.add(req.body.data[i]);
